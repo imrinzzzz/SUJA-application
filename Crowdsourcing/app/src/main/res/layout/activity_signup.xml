@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#202135"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/img_pick_btn"
+                android:layout_width="150dp"
+                android:layout_height="144dp"
+                android:layout_margin="15dp"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/background_add_image" />
+
+            <ImageView
+                android:id="@+id/addicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_add_image" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F0F0F0"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="-74dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/id"
+                        android:layout_width="322dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@android:color/background_light"
+                        android:ems="10"
+                        android:hint="@string/email"
+                        android:inputType="textPersonName"
+                        android:padding="15dp" />
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="322dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:color/background_light"
+                        android:ems="10"
+                        android:hint="@string/Username"
+                        android:inputType="textPersonName"
+                        android:padding="15dp" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="322dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/background_light"
+                        android:ems="10"
+                        android:hint="@string/Password"
+                        android:inputType="textPassword"
+                        android:padding="15dp" />
+
+                    <EditText
+                        android:id="@+id/confirm_pass"
+                        android:layout_width="322dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/background_light"
+                        android:ems="10"
+                        android:hint="@string/Confirm_Password"
+                        android:inputType="textPassword"
+                        android:padding="15dp" />
+
+                    <TextView
+                        android:id="@+id/dash"
+                        android:layout_width="36dp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#000000"
+                        app:layout_constraintHeight_percent="0.005"
+                        app:layout_constraintWidth_percent="0.1" />
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/you_are" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/supporter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="click_supporter"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        tools:ignore="OnClick">
+
+                        <ImageView
+                            android:id="@+id/support_btn"
+                            android:layout_width="81dp"
+                            android:layout_height="81dp"
+                            android:background="@drawable/unclick"
+                            android:onClick="support_select"
+                            android:padding="15dp"
+                            app:layout_constraintHeight_percent="0.15"
+                            app:layout_constraintWidth_percent="0.15"
+                            app:srcCompat="@drawable/ic_employee_1"/>
+
+
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Supporter"
+                            android:textColor="#202135" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:onClick="click_artist"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        tools:ignore="OnClick">
+
+                        <ImageView
+                            android:id="@+id/artist_btn"
+                            android:layout_width="81dp"
+                            android:layout_height="81dp"
+                            android:background="@drawable/unclick"
+                            android:onClick="artist_select"
+                            android:padding="15dp"
+                            app:srcCompat="@drawable/ic_singer_1" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="61dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/Artist"
+                            android:textColor="#202135" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/confirm"
+                        android:layout_width="270dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/button"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Confirm"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.159" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

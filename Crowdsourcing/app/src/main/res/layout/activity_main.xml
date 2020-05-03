@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202135"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/flag"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_eng_flag"
+                    android:layout_marginRight="16dp"/>
+
+
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="230dp"
+                    android:layout_height="208dp"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintWidth_percent="0.8"
+                    app:srcCompat="@drawable/logo_home" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/ic_background"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.584">
+
+                <TextView
+                    android:id="@+id/signup"
+                    android:layout_width="270dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="signup"
+                    android:text="@string/sign_up_button"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintHeight_percent="0.15"
+                    app:layout_constraintWidth_percent="0.6" />
+
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="275dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginEnd="45dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/transparent_button"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/login_button"
+                    android:textColor="#00DBD9"
+                    android:textSize="20sp"
+                    app:layout_constraintHeight_percent="0.15"
+                    app:layout_constraintWidth_percent="0.6" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
